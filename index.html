@@ -12,23 +12,31 @@
 <body>
 
   <h1>VeriEvent - Credenciales Verificables</h1>
-
+  
+  
   <h2>Crear Evento</h2>
   <input id="eventName" placeholder="Nombre del evento" />
   <input id="eventDate" type="date" />
-  <button onclick="crearVC()">Unirse al evento</button>
+  <input id="eventTime" type="time" placeholder="Hora del evento" />
+  <input id="eventLocation" placeholder="Ubicación del evento" />
 
+  <button onclick="crearVC()">Unirse al evento</button>
+  
   <h3>Tu Credencial</h3>
   <pre id="vcDisplay">(esperando credencial...)</pre>
   <button onclick="descargarVC()">📥 Descargar VC</button>
-
+  
   <hr>
-
+  
   <h2>Verificar Credencial</h2>
   <input type="file" id="vcFileInput" />
   <button onclick="verificarVC()">✅ Verificar</button>
   <p id="verificacionResultado"></p>
+  
+  <div id="vcList">
+    <h2>Mis credenciales</h2>
 
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
